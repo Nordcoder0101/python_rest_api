@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Flask MySQL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href={{ url_for('static', filename='style.css') }} />
+</head>
+<body>
+  {% for user in users %}
+    <h3>User {{user['id']}}</h3>
+    <p>Full Name: {{user['first_name']}} {{ user['last_name']}}</p>
+    <p>Email: {{user['email']}}</p>
+    <p>Created at: {{user['created_at']}}</p>
+  {% endfor %}
+</body>
+<html>
